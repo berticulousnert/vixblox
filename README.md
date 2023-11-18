@@ -3,13 +3,13 @@
 
 Aoi Canvas is a package that allows you to utilize canvas functions with Aoi.js Bot.
 
-Docs: [link](https://aoicanvas.vercel.app/)
+Docs: [None yet](https://github.com/berticulousnert/vixblox)
 
 ## Setup
 
-1. Install `aoi.canvas` package:
+1. Install `aoi.vixblox` package:
 ```shell
-npm install aoi.canvas
+npm install aoi.vixblox
 ```
 
 2. Import the `aoi.canvas` library into your project:
@@ -17,23 +17,24 @@ npm install aoi.canvas
 const aoicanvas = require("aoi.canvas");
 ```
 
-3. Load Aoi Canvas with the required parameters:
+3. Load vixblox with the required parameters:
 ```javascript
-aoicanvas.load({
-  bot: bot, // Aoi.js Bot object.
-  Util: Util, // To make aoi.canvas parser work. ($sendMessage, $channelSendMessage, $interactionReply, etc)
-  DownloadFolder: "./folder/", // Folder for $downloadCanvas, optional.
-  ErrorsType: "console" // AoiCanva errors type, optional. (console/message/none)
-});
+vixblox.load({
+    bot: bot,
+    errortype: "message",
+    enableErrors: true,
+    version: "v6",
+    Util: Util
+ });
 ```
 
-4. You are ready to use Aoi Canvas with your Aoi.js Bot!
+4. You are ready to use vixblox with your Aoi.js Bot!
 
 ## Example
 
 ```javascript
 const { AoiClient, Util } = require("aoi.js");
-const aoicanvas = require("aoi.canvas");
+const vixblox = require("aoi.vixblox");
 
 const client = new AoiClient({
   token: "Discord Bot Token",
@@ -51,12 +52,13 @@ const client = new AoiClient({
   },
 });
 
-aoicanvas.load({
-    client: client,
-    Util: Util,
-    DownloadFolder: "./aoicanvas/",
-    ErrorsType: "console"
-});
+vixblox.load({
+    bot: bot,
+    errortype: "message",
+    enableErrors: true,
+    version: "v6",
+    Util: Util
+ });
 
 // Ping Command Example
 bot.command({
@@ -64,43 +66,30 @@ bot.command({
     code: `Pong! $pingms`
 });
 
-// Pro Avatar Command Example
+// get bob avatar :)
 bot.command({
-    name: "pro",
+    name: "bobby",
     code: `
-    $sendCanvas[pro]
-    $drawText[pro;Pro;225;450]
-    $setShadow[pro;20]
-    $canvasColor[pro;#FFFFFF;shadow]
-    $font[pro;50px Arial]
-    $canvasColor[pro;#000000]
-    $drawImage[pro;avatar;0;0;512;512]
-    $loadImage[pro;avatar;url;$nonEscape[$authorAvatar]]
-    $createCanvas[pro;512;512]
+    $getPlayerInfo[367]
     `
 });
- 
-// Leref Pro Command Example
-bot.command({
-  name: "leref",
-  code: `
-  $sendCanvas[lerefPro;msg]
-  $lerefPro
-  `
-});
+
+// expected output {"username":"Bob","displayName":"Bob","blurb":"Bobbeh es meh","joinDate":"2006-07-21T21:30:46.670Z","age":6329,"friendCount":92,"followerCount":55034,"followingCount":17658,"oldNames":[],"isBanned":false}
 ```
 
 ## Credits
 
-- lordex (uwu)
+- me (notbob yet)
+- lordex aoi.canvas guy :D
+- lightner fren
 - akaruiteam (aoi.js)
 
-These are the contributors who have contributed to the Aoi Canvas project.
+These are the contributors who have contributed to the aoi.vixblox project.
 
 ---
 
-Remember to follow the setup steps mentioned above to start using Aoi Canvas in your aoi.js Bot.
+Remember to follow the setup steps mentioned above to start using vixblox in your aoi.js Bot.
 
 Feel free to reach out if you have any questions or need further assistance.
 
-Enjoy coding with Aoi Canvas!
+Enjoy coding with vixblox!
