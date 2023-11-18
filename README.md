@@ -1,7 +1,7 @@
 
-# Aoi Canvas
+# aoi.vixblox
 
-Aoi Canvas is a package that allows you to utilize canvas functions with Aoi.js Bot.
+aoi.vixblox is a package that allows you to utilize roblox api functions within Aoi.js Bot.
 
 Docs: [None yet](https://github.com/berticulousnert/vixblox)
 
@@ -12,9 +12,9 @@ Docs: [None yet](https://github.com/berticulousnert/vixblox)
 npm install aoi.vixblox
 ```
 
-2. Import the `aoi.canvas` library into your project:
+2. Import the `aoi.vixblox` library into your project:
 ```javascript
-const aoicanvas = require("aoi.canvas");
+const vixblox = require("aoi.vixblox");
 ```
 
 3. Load vixblox with the required parameters:
