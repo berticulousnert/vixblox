@@ -6,8 +6,8 @@ const { ButtonStyleOptions } = require("./Constants.js");
 const SlashOption = require("./slashOption.js");
 const { Time } = require("./TimeParser.js");
 const { CreateObjectAST } = require("./functions.js");
-const { newError } = require("./canvaError.js");
-const canvaError = require("./canvaError.js");
+const { newError } = require("./vixError.js");
+const canvaError = require("./vixError.js");
 
 const { loadImage, GlobalFonts} = require("@napi-rs/canvas");
 

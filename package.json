@@ -1,11 +1,9 @@
 {
   "dependencies": {
-    "@napi-rs/canvas": "^0.1.41",
     "axios": "^1.4.0",
     "discord.js": "^14.11.0",
-    "fs": "^0.0.1-security",
-    "gif-encoder-2": "^1.0.5",
-    "path": "^0.12.7"
+    "noblox.js": "^4.15.0",
+    "fs": "^0.0.1-security"
   },
   "name": "aoi.canvas",
   "version": "1.2.0",
@@ -21,13 +19,13 @@
   },
   "keywords": [
     "aoi.js",
-    "canvas",
-    "aoi.canvas",
+    "roblox",
+    "noblox.js",
+    "aoi.vixblox",
     "aoi",
     "dbd",
-    "dbd.js",
-    "gif"
+    "dbd.js"
   ],
-  "author": "Lordex",
+  "author": "Berticulousnert",
   "license": "ISC"
 }

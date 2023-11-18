@@ -1,33 +1,28 @@
-let { createCanvas, GlobalFonts } = require("@napi-rs/canvas");
+const noblox = require("noblox.js")
 let fs = require("fs");
 let path = require("path");
-const canvaError = require("./util/canvaError.js");
-const canvaWarn = require("./util/canvaWarn.js");
+// const vixError = require("./util/vixError.js");
+// const vixWarn = require("./util/vixWarn.js");
+const { boolean } = require("./util/slashOption.js");
 
 module.exports = {
-    load: (Lobj) => {
-        const canvaWarn = require("./util/canvaWarn.js");
+    load: (vixblox) => {
 
-        const bot = Lobj.bot || Lobj.client;
-        const df = Lobj.DownloadFolder || "./canvas/";
+        const bot = vixblox.bot || vixblox.client;
+        const cookie = null || String
+        const vixsuppressErrors = boolean
         const et = Lobj.ErrorsType || "message";
-        const vers = Lobj.version || "v6";
-        const util = Lobj.Util || "none"
+        const vers = "v6";
+        const util = vixblox.Util || "none"
 
         this.data = {
             "bot": bot,
-            "Util": util,
-            "dirname": process.cwd(),
-            "DownloadFolder": df,
-            "ErrorsType": et,
-            "version": vers,
-            "Data": {
-                "canvases": {},
-                "gifs": {}
-            },
+            "cookie": cookie,
+            "errortype": et,
+            "suppressErrors": vixsuppressErrors,
+            "version": vers
+            
         };
-
-        global.loadedFonts_canvas_aoi_cat_uwu = this.data["loadedFonts"];
 
         if (util && util !== "none") {
             util.parsers.ErrorHandler = require("./util/parser.js").AllParser;
@@ -40,42 +35,21 @@ module.exports = {
                     thefunction
                 );
             };
-            console.log(`\x1b[96m|---------------|\n|---\x1b[97mAoiCanvas\x1b[96m---|\n|----\x1b[97mLoaded.\x1b[96m----|\n|-----\x1b[97maoiv6\x1b[96m-----|\n|---------------|\x1b[0m`);
+            console.log(`\x1b[96m|---------------|\n|---\x1b[97mVixBlox\x1b[96m---|\n|----\x1b[97mLoaded.\x1b[96m----|\n|-----\x1b[97maoiv6\x1b[96m-----|\n|---------------|\x1b[0m`);
             
-            console.log(" ");
-            console.log("\x1b[96m|\x1b[0m \x1b[97mDownloadFolder: "+df+"");
-            console.log("\x1b[96m|\x1b[0m \x1b[97mErrorsType: " + et);
-            console.log(" ");
         } else {
-            canvaWarn.newWarn("Version '"+vers+"' not found!!!!! please set version to \"v6\". If you dont change it to supported version aoi.canvas will not work!")
+           vixWarn.newWarn("Version '"+vers+"' not found!!!!! please set version to \"v6\". If you dont change it to supported version aoi.vixblox will not work!")
         };
 
-        if (Lobj.fonts) canvaWarn.newWarn("Fonts in load() no more supported. (Due to error.)"), console.log(" ");
-
-        if (et !== "console" && et !== "msg" && et !== "message" && et !== "none") {
-            canvaWarn.newWarn(`Unknown 'ErrorsType' option type. AoiCanvas Errors would not be shown.`);
-        };
     },
 
     getData: () => {
         return this.data;
     },
 
-    canvasData: (tobj) => {
-        if (tobj.method) {
-            if (tobj.method === "get") {
-                return this.data.Data;
-            } else if (tobj.method === "set") {
-                if (!tobj.where || !tobj.what || !tobj.value) return;
-
-                this.data.Data[tobj.where][tobj.what] = tobj.value;
-            }
-        }
-    },
-
     utils: {
-        canvaError: require("./util/canvaError.js"),
-        canvaWarn: require("./util/canvaWarn.js"),
+        vixError: require("./util/vixError.js"),
+        vixWarn: require("./util/vixWarn.js"),
         parser: require("./util/parser.js")
     },
 };
