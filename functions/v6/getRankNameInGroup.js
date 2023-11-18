@@ -3,16 +3,16 @@ const noblox = require("noblox.js");
 // credit to aoi.canvas akaka Lordex.js
 
 module.exports = {
-    name: "$getPlayerInfo",
+    name: "$getRankNameInGroup",
     type: "djs",
     code: async (d) => {
         const data = d.util.aoiFunc(d);
-        let [userid] = data.inside.splits;
+        let [groupid, userid] = data.inside.splits;
         try {
-        if(!userid) {
-           return vixError(d, "You require a userID to continue.");
-        } else if(userid) {
-            let userdata = await noblox.getPlayerInfo({userId: userid})
+        if(!groupid && !userid) {
+           return vixError(d, "GroupID and UserId required.");
+        } else if(groupid && userid) {
+            let userdata = await noblox.getRankNameInGroup(groupid, userid)
             var commanddata = JSON.stringify(userdata);
         }
         data.result = commanddata

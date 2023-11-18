@@ -3,16 +3,16 @@ const noblox = require("noblox.js");
 // credit to aoi.canvas akaka Lordex.js
 
 module.exports = {
-    name: "$getPlayerInfo",
+    name: "$setRank",
     type: "djs",
     code: async (d) => {
         const data = d.util.aoiFunc(d);
-        let [userid] = data.inside.splits;
+        let [groupid, user, change, token] = data.inside.splits;
         try {
-        if(!userid) {
-           return vixError(d, "You require a userID to continue.");
-        } else if(userid) {
-            let userdata = await noblox.getPlayerInfo({userId: userid})
+        if(!groupid && !user && !change && !token) {
+           return vixError(d, "All three arguments are required: GroupID, Target, Rank The rank, roleset ID, name of the role, or the actual Role itself, Roblox Account Cookie");
+        } else if(groupid && user && change && token) {
+            let userdata = await noblox.setRank({group: groupid, target: user, rank: change, jar: token})
             var commanddata = JSON.stringify(userdata);
         }
         data.result = commanddata

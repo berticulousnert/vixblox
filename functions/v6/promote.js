@@ -3,16 +3,16 @@ const noblox = require("noblox.js");
 // credit to aoi.canvas akaka Lordex.js
 
 module.exports = {
-    name: "$getPlayerInfo",
+    name: "$promote",
     type: "djs",
     code: async (d) => {
         const data = d.util.aoiFunc(d);
-        let [userid] = data.inside.splits;
+        let [groupid, user, token] = data.inside.splits;
         try {
-        if(!userid) {
-           return vixError(d, "You require a userID to continue.");
-        } else if(userid) {
-            let userdata = await noblox.getPlayerInfo({userId: userid})
+        if(!groupid && !user && !token) {
+           return vixError(d, "All three arguments are required: GroupID, Target, Roblox Account Cookie");
+        } else if(groupid && user && token) {
+            let userdata = await noblox.promote({group: groupid, target: user, jar: token})
             var commanddata = JSON.stringify(userdata);
         }
         data.result = commanddata
