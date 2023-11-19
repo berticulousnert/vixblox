@@ -101,6 +101,9 @@ These are the contributors who have contributed to the aoi.vixblox project.
 - $leaveGroup[groupid, token]
 - $handleJoinRequest[groupid, userid, accept(true/false), token]
 - $exile[groupid, userid, token]
+- $getIdFromUsername[username]
+- $getUsernameFromId[userid]
+- $getPlayerHeadShot[user, size, format, iscircular, croptype] (Only user is required rest is optional)
 
 ---
 

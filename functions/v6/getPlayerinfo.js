@@ -12,7 +12,10 @@ module.exports = {
         if(!userid) {
            return vixError(d, "You require a userID to continue.");
         } else if(userid) {
-            let userdata = await noblox.getPlayerInfo({userId: userid})
+            let userdata = await noblox.getPlayerInfo({ userId: userid });
+            let joindata = userdata.joinDate;
+            let joindatainms = joindata.getTime();
+            userdata.joinDate = joindatainms;
             var commanddata = JSON.stringify(userdata);
         }
         data.result = commanddata
