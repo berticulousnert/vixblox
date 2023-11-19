@@ -1,6 +1,8 @@
 
 # aoi.vixblox
 
+# As of 11/18/2023 **THIS IS NOT AN OFFICAL AOI.JS PACKAGE. yet**
+
 aoi.vixblox is a package that allows you to utilize roblox api functions within Aoi.js Bot.
 
 Docs: [None yet](https://github.com/berticulousnert/vixblox)
@@ -85,6 +87,19 @@ bot.command({
 - akaruiteam (aoi.js)
 
 These are the contributors who have contributed to the aoi.vixblox project.
+
+# Functions & Args
+
+- $getGroup[groupid]
+- $demote[groupid, userid, token]
+- $promote[groupid, userid, token]
+- $getPlayerInfo[userid]
+- $getRankNameInGroup[groupid, userid]
+- $getRankInGroup[groupid, userid]
+- $setRank[groupid, userid, rank, token]
+- $leaveGroup[groupid, token]
+- $handleJoinRequest[groupid, userid, accept(true/false), token]
+- $exile[groupid, userid, token]
 
 ---
 

@@ -7,12 +7,12 @@ module.exports = {
     type: "djs",
     code: async (d) => {
         const data = d.util.aoiFunc(d);
-        let [groupid] = data.inside.splits;
+        let [groupid, token] = data.inside.splits;
         try {
-        if(!groupid) {
-           return vixError(d, "GroupID required.");
-        } else if(groupid) {
-            let userdata = await noblox.leaveGroup(groupid)
+        if(!groupid && !token) {
+           return vixError(d, "GroupID and token is required.");
+        } else if(groupid && token) {
+            let userdata = await noblox.leaveGroup(groupid, token)
             var commanddata = JSON.stringify(userdata);
         }
         data.result = commanddata
