@@ -21,7 +21,7 @@ module.exports = {
         }
         data.result = commanddata
     } catch (err) {
-        console.error(err)
+        
        return vixError(d, err)
     }
         return {
