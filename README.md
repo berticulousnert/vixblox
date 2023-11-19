@@ -82,9 +82,10 @@ bot.command({
 ## Credits
 
 - me (notbob yet)
-- lordex aoi.canvas guy :D
+- lordex aoi.canvas guy (uwuwuw he ask for it) :D
 - lightner fren
 - akaruiteam (aoi.js)
+- leref because leref is leref
 
 These are the contributors who have contributed to the aoi.vixblox project.
 
