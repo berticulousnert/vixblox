@@ -103,7 +103,7 @@ These are the contributors who have contributed to the aoi.vixblox project.
 - $exile[groupid, userid, token]
 - $getIdFromUsername[username]
 - $getUsernameFromId[userid]
-- $getPlayerHeadShot[user, size, format, iscircular, croptype] (Only user is required rest is optional)
+- $getPlayerAvatar[user, size, format, iscircular] (Only user is required rest is optional)
 
 ---
 
