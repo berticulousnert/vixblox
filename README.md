@@ -1,7 +1,6 @@
-
 # aoi.vixblox
 
-# As of 11/18/2023 **THIS IS NOT AN OFFICAL AOI.JS PACKAGE. yet**
+# As of 11/18/2023 **THIS IS NOT AN OFFICAL AOI.JS PACKAGE. maybe never will :(**
 
 aoi.vixblox is a package that allows you to utilize roblox api functions within Aoi.js Bot.
 
@@ -10,24 +9,26 @@ Docs: [None yet](https://github.com/berticulousnert/vixblox)
 ## Setup
 
 1. Install `aoi.vixblox` package:
+
 ```shell
 npm install aoi.vixblox
 ```
 
 2. Import the `aoi.vixblox` library into your project:
+
 ```javascript
 const vixblox = require("aoi.vixblox");
 ```
 
 3. Load vixblox with the required parameters:
+
 ```javascript
 vixblox.load({
-    bot: bot,
-    errortype: "message",
-    enableErrors: true,
-    version: "v6",
-    Util: Util
- });
+  bot: bot,
+  errortype: "message",
+  enableErrors: true,
+  version: "v6",
+});
 ```
 
 4. You are ready to use vixblox with your Aoi.js Bot!
@@ -55,25 +56,24 @@ const client = new AoiClient({
 });
 
 vixblox.load({
-    bot: bot,
-    errortype: "message",
-    enableErrors: true,
-    version: "v6",
-    Util: Util
- });
+  bot: bot,
+  errortype: "message",
+  enableErrors: true,
+  version: "v6",
+});
 
 // Ping Command Example
 bot.command({
-    name: "ping",
-    code: `Pong! $pingms`
+  name: "ping",
+  code: `Pong! $pingms`,
 });
 
 // get bob avatar :)
 bot.command({
-    name: "bobby",
-    code: `
+  name: "bobby",
+  code: `
     $getPlayerInfo[367]
-    `
+    `,
 });
 
 // expected output {"username":"Bob","displayName":"Bob","blurb":"Bobbeh es meh","joinDate":"2006-07-21T21:30:46.670Z","age":6329,"friendCount":92,"followerCount":55034,"followingCount":17658,"oldNames":[],"isBanned":false}
@@ -104,10 +104,14 @@ These are the contributors who have contributed to the aoi.vixblox project.
 - $getIdFromUsername[username]
 - $getUsernameFromId[userid]
 - $getPlayerAvatar[user, size, format, iscircular] (Only user is required rest is optional)
+- $viewcase[caseID]
+- $moderate[userID(Roblox;Type;Punishment;Reason?]
 
 ---
 
 Remember to follow the setup steps mentioned above to start using vixblox in your aoi.js Bot.
+
+Let me know of any errors or anything to be fixed
 
 Feel free to reach out if you have any questions or need further assistance.
 
