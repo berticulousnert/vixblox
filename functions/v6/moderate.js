@@ -44,7 +44,9 @@ module.exports = {
           nextCaseNumber
         );
 
-        var commanddata = db;
+        var commanddata = JSON.stringify({
+          success: true,
+        });
       }
       data.result = commanddata;
     } catch (err) {

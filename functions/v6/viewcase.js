@@ -35,7 +35,7 @@ module.exports = {
           caseData.caseID = caseID;
 
           // Process the data as needed
-          console.log(`Viewing case_${caseID} data:`, caseData);
+          //console.log(`Viewing case_${caseID} data:`, caseData);
 
           // Convert the modified object back to a JSON string
           var commanddata;
