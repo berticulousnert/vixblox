@@ -39,6 +39,7 @@ module.exports = {
 
           // Convert the modified object back to a JSON string
           var commanddata;
+          commanddata = JSON.stringify(caseData);
         } else {
           // Case not found
           commanddata = JSON.stringify({
