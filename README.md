@@ -106,6 +106,9 @@ These are the contributors who have contributed to the aoi.vixblox project.
 - $getPlayerAvatar[user, size, format, iscircular] (Only user is required rest is optional)
 - $viewcase[caseID]
 - $moderate[userID(Roblox;Type;Punishment;Reason?]
+- $viewallcase[userID]
+- $editcase[caseID;Reason;Punishment;Moderator]
+- $deletecase[caseID]
 
 ---
 

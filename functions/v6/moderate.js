@@ -46,6 +46,7 @@ module.exports = {
 
         var commanddata = JSON.stringify({
           success: true,
+          caseID: nextCaseNumber,
         });
       }
       data.result = commanddata;
