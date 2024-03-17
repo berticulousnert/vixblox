@@ -33,7 +33,7 @@ module.exports = {
           d.client.db.tables[0],
           `case_${nextCaseNumber}`,
           d.guild?.id,
-          `{"userId": "${userID}","reason": "${Reason}","punishment": "${Punishment}","moderator": "${Moderator}"}`
+          `{"userId": "${userID}","reason": "${Reason}","punishment": "${Punishment}","moderator": "${Moderator}", "timestamp": "${Date.now()}", "edited": "False"}`
         );
 
         // Update the latest case number in the database

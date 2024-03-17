@@ -41,6 +41,12 @@ module.exports = {
           if (Moderator !== "") {
             caseData.moderator = Moderator;
           }
+          if (caseData.timestamp !== null && caseData.timestamp !== undefined) {
+            caseData.timestamp = `${Date.now()}`;
+          }
+          if (caseData.edited !== null && caseData.edited !== undefined) {
+            caseData.edited = "True";
+          }
 
           // Save the updated case data back to the database
           await d.client.db.set(
