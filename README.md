@@ -4,7 +4,7 @@
 
 aoi.vixblox is a package that allows you to utilize roblox api functions within Aoi.js Bot.
 
-Docs: [None yet](https://github.com/berticulousnert/vixblox)
+Docs: [Website go brr](https://vixbloxdocs.victier.xyz)
 
 ## Setup
 
@@ -91,24 +91,7 @@ These are the contributors who have contributed to the aoi.vixblox project.
 
 # Functions & Args
 
-- $getGroup[groupid]
-- $demote[groupid, userid, token]
-- $promote[groupid, userid, token]
-- $getPlayerInfo[userid]
-- $getRankNameInGroup[groupid, userid]
-- $getRankInGroup[groupid, userid]
-- $setRank[groupid, userid, rank, token]
-- $leaveGroup[groupid, token]
-- $handleJoinRequest[groupid, userid, accept(true/false), token]
-- $exile[groupid, userid, token]
-- $getIdFromUsername[username]
-- $getUsernameFromId[userid]
-- $getPlayerAvatar[user, size, format, iscircular] (Only user is required rest is optional)
-- $viewcase[caseID]
-- $moderate[userID(Roblox;Type;Punishment;Reason?]
-- $viewallcase[userID]
-- $editcase[caseID;Reason;Punishment;Moderator]
-- $deletecase[caseID]
+## [Check docs for functions args and examples](https://vixblox.victier.xyz)
 
 ---
 
