@@ -1,10 +1,10 @@
 # aoi.vixblox
 
-# As of 6/12/2024 **this is an offical aoi.js package ~ leref.**
+# As of 11/18/2023 **THIS IS NOT AN OFFICAL AOI.JS PACKAGE. maybe never will :(**
 
 aoi.vixblox is a package that allows you to utilize roblox api functions within Aoi.js Bot.
 
-Docs: [docs](https://vixbloxdocs.victier.xyz/)
+Docs: [Website go brr](https://vixbloxdocs.victier.xyz)
 
 ## Setup
 
@@ -81,7 +81,7 @@ bot.command({
 
 ## Credits
 
-- me (i literally made it)
+- me (notbob yet)
 - lordex aoi.canvas guy (uwuwuw he ask for it) :D
 - lightner fren
 - akaruiteam (aoi.js)
@@ -91,24 +91,7 @@ These are the contributors who have contributed to the aoi.vixblox project.
 
 # Functions & Args
 
-- $getGroup[groupid]
-- $demote[groupid, userid, token]
-- $promote[groupid, userid, token]
-- $getPlayerInfo[userid]
-- $getRankNameInGroup[groupid, userid]
-- $getRankInGroup[groupid, userid]
-- $setRank[groupid, userid, rank, token]
-- $leaveGroup[groupid, token]
-- $handleJoinRequest[groupid, userid, accept(true/false), token]
-- $exile[groupid, userid, token]
-- $getIdFromUsername[username]
-- $getUsernameFromId[userid]
-- $getPlayerAvatar[user, size, format, iscircular] (Only user is required rest is optional)
-- $viewcase[caseID]
-- $moderate[userID(Roblox;Type;Punishment;Reason?]
-- $viewallcase[userID]
-- $editcase[caseID;Reason;Punishment;Moderator]
-- $deletecase[caseID]
+## [Check docs for functions args and examples](https://vixblox.victier.xyz)
 
 ---
 
