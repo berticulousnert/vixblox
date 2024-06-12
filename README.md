@@ -1,10 +1,10 @@
 # aoi.vixblox
 
-# As of 11/18/2023 **THIS IS NOT AN OFFICAL AOI.JS PACKAGE. maybe never will :(**
+# As of 6/12/2024 **this is an offical aoi.js package ~ leref.**
 
 aoi.vixblox is a package that allows you to utilize roblox api functions within Aoi.js Bot.
 
-Docs: [None yet](https://github.com/berticulousnert/vixblox)
+Docs: [docs](https://vixbloxdocs.victier.xyz/)
 
 ## Setup
 
@@ -81,7 +81,7 @@ bot.command({
 
 ## Credits
 
-- me (notbob yet)
+- me (i literally made it)
 - lordex aoi.canvas guy (uwuwuw he ask for it) :D
 - lightner fren
 - akaruiteam (aoi.js)
