@@ -1,4 +1,5 @@
 const vixError = require("../../util/vixError");
+const { getData } = require("../../index")
 
 module.exports = {
   name: "$viewcase",
@@ -11,9 +12,10 @@ module.exports = {
       if (!caseID) {
         return vixError(d, "You need a caseID to continue.");
       } else {
+        let table = getData().dbtable
         // Fetch the case data from the database based on the provided caseID
         let caseDataObject = await d.client.db.get(
-          d.client.db.tables[0],
+          d.client.db.tables[table],
           `case_${caseID}`,
           d.guild?.id
         );

@@ -1,3 +1,4 @@
+const { getData } = require("../../index");
 const vixError = require("../../util/vixError");
 
 module.exports = {
@@ -16,10 +17,11 @@ module.exports = {
       if (!userID || !Reason || !Punishment || !Moderator) {
         return vixError(d, "At least one of the args is required");
       } else {
+        let table = getData().dbtable
         // Find the latest case number
         let latestCaseObject =
           (await d.client.db.get(
-            d.client.db.tables[0],
+            d.client.db.tables[table],
             "latest_case",
             d.guild?.id
           )) || {};
@@ -30,7 +32,7 @@ module.exports = {
 
         // Set the value for the next case
         let db = await d.client.db.set(
-          d.client.db.tables[0],
+          d.client.db.tables[table],
           `case_${nextCaseNumber}`,
           d.guild?.id,
           `{"userId": "${userID}","reason": "${Reason}","punishment": "${Punishment}","moderator": "${Moderator}", "timestamp": "${Date.now()}", "edited": "False"}`
@@ -38,7 +40,7 @@ module.exports = {
 
         // Update the latest case number in the database
         await d.client.db.set(
-          d.client.db.tables[0],
+          d.client.db.tables[table],
           "latest_case",
           d.guild?.id,
           nextCaseNumber

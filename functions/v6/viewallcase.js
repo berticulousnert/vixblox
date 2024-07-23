@@ -1,4 +1,5 @@
 const vixError = require("../../util/vixError");
+const { getData } = require("../../index") 
 
 module.exports = {
   name: "$viewallcase",
@@ -11,9 +12,10 @@ module.exports = {
       if (!userId) {
         return vixError(d, "You need a userId to continue.");
       } else {
+        let table = getData().dbtable
         // Fetch the latest case number from the database
         let latestCaseObject = await d.client.db.get(
-          d.client.db.tables[0],
+          d.client.db.tables[table],
           "latest_case",
           d.guild?.id
         );
@@ -28,7 +30,7 @@ module.exports = {
           for (let i = 1; i <= latestCase; i++) {
             // Fetch the case data for the current case ID
             let caseDataObject = await d.client.db.get(
-              d.client.db.tables[0],
+              d.client.db.tables[table],
               `case_${i}`,
               d.guild?.id
             );

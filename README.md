@@ -27,7 +27,7 @@ vixblox.load({
   bot: bot,
   errortype: "message",
   enableErrors: true,
-  version: "v6",
+  dbtable: 0
 });
 ```
 
@@ -59,7 +59,7 @@ vixblox.load({
   bot: bot,
   errortype: "message",
   enableErrors: true,
-  version: "v6",
+  dbtable: 0
 });
 
 // Ping Command Example
@@ -82,10 +82,11 @@ bot.command({
 ## Credits
 
 - me (i literally made it)
-- lordex aoi.canvas guy (uwuwuw he ask for it) :D
+- lordex aoi.canvas guy (uwuwuw he ask for it) :p
 - lightner fren
 - akaruiteam (aoi.js)
 - leref because leref is leref
+- fafa.
 
 These are the contributors who have contributed to the aoi.vixblox project.
 

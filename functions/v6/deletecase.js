@@ -1,4 +1,5 @@
 const vixError = require("../../util/vixError");
+const { getData } = require("../../index")
 
 module.exports = {
   name: "$deletecase",
@@ -12,9 +13,10 @@ module.exports = {
         return vixError(d, "CaseID is required to delete a case.");
       } else {
         try {
+          const table = getData().dbtable
           // Check if the case exists in the database
           let caseDataObject = await d.client.db.get(
-            d.client.db.tables[0],
+            d.client.db.tables[table],
             `case_${caseID}`,
             d.guild?.id
           );
@@ -25,7 +27,7 @@ module.exports = {
 
           // Delete the case data from the database
           await d.client.db.delete(
-            d.client.db.tables[0],
+            d.client.db.tables[table],
             `case_${caseID}`,
             d.guild?.id
           );
