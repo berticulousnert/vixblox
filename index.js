@@ -1,10 +1,7 @@
-const noblox = require("noblox.js");
-let fs = require("fs");
-let path = require("path");
 const vixWarn = require("./util/vixWarn.js");
 const vixloadmsg = require("./util/vixloader.js");
-const {dependencies} = require('../package.json');
-let version = dependencies["aoi.js"]
+const path = require('path');
+const fs = require('fs');
 
 module.exports = {
   load: (vixblox) => {
@@ -19,6 +16,29 @@ module.exports = {
       enableErrors: vixerr,
       dbtable: dbt
     };
+
+    try{
+       // path
+    const packagePath = path.resolve(__dirname, '../package.json');
+    
+    // checker
+    if (fs.existsSync(packagePath)) {
+      try {
+        const packageJson = require(packagePath);
+        const { dependencies } = packageJson;
+        
+        if (dependencies && dependencies["aoi.js"]) {
+          var version = dependencies["aoi.js"];
+        } else {
+          console.error('aoi.js is not listed in the dependencies.');
+        }
+      } catch (error) {
+        console.error('Error reading package.json:', error);
+      }
+    } else {
+      console.error('package.json not found at the specified path.');
+    }
+    
 
     if (version.includes("^6")) {
       for (const file of fs
@@ -39,6 +59,7 @@ module.exports = {
           '\' aoi.vixblox was only made to run on v6.'
       );
     }
+  }catch(error){console.log(`Vixblox fail to load. ${error}`)}
 
     if (et !== "console" && et !== "msg" && et !== "message" && et !== "none") {
       vixWarn(
