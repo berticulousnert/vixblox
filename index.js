@@ -19,7 +19,7 @@ module.exports = {
 
     try{
        // path
-    const packagePath = path.resolve(__dirname, '../package.json');
+    const packagePath = path.resolve(__dirname, '../../package.json');
     
     // checker
     if (fs.existsSync(packagePath)) {

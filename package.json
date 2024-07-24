@@ -6,7 +6,7 @@
     "noblox.js": "^4.15.0"
   },
   "name": "aoi.vixblox",
-  "version": "1.9.2",
+  "version": "1.9.3",
   "description": "Bring Roblox Moderation to aoi.js",
   "main": "index.js",
   "scripts": {
