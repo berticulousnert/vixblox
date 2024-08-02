@@ -29,6 +29,12 @@ module.exports = {
 
     async function start() {
       try {
+        for (const file of fs
+          .readdirSync(path.join(__dirname, "./functions/v6"))
+          .filter((file) => file.endsWith(".js"))) {
+          var thefunction = require("./functions/v6/" + file);
+          bot.functionManager.createFunction(thefunction);
+        }
           vixloadmsg(
             [
               {
