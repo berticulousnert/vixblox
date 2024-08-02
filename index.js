@@ -55,7 +55,7 @@ module.exports = {
     } else {
       vixWarn(
         "Version '" +
-          vers +
+          version +
           '\' aoi.vixblox was only made to run on v6.'
       );
     }
