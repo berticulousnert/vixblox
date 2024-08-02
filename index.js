@@ -20,7 +20,7 @@ module.exports = {
 
     try{
       await new Promise((resolve) => {
-        this.client.once("ready", () => {
+        this.bot.once("ready", () => {
           start()
         });
       });
